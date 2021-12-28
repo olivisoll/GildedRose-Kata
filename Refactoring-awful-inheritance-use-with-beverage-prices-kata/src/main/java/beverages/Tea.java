@@ -1,6 +1,6 @@
 package beverages;
 
-public class Tea implements Beverage {
+public final class Tea implements Beverage {
     @Override
     public double price() {
         return 1.5;
