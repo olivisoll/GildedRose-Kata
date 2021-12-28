@@ -1,17 +1,47 @@
 package com.gildedrose;
 
-public class Item {
+abstract class Item {
 
-    public String name;
+    private ItemName name;
 
-    public int sellIn;
+    private ItemSellIn sellIn;
 
-    public int quality;
+    private ItemQuality quality;
 
-    public Item(String name, int sellIn, int quality) {
+    public Item(final ItemName name, final ItemSellIn sellIn, final ItemQuality quality) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
+    }
+
+    abstract void update();
+
+    ItemSellIn sellIn(){
+        return sellIn;
+    }
+
+    ItemQuality quality(){
+        return quality;
+    }
+
+    void decreaseSellIn(){
+        sellIn = sellIn.decrease();
+    }
+
+    Boolean hasToBeSoldInLessThan(Integer days){
+        return sellIn.isLessThan(days);
+    }
+
+    void increaseQuality(){
+        quality = quality.increase();
+    }
+
+    void decreaseQuality(){
+        quality = quality.decrease();
+    }
+
+    void resetQuality(){
+        quality = quality.reset();
     }
 
    @Override
