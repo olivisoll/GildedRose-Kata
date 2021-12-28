@@ -7,14 +7,15 @@ final class ItemName {
     protected static final String AGED_BRIE = "Aged Brie";
     protected static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
     protected static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    protected static final String CONJURED = "Conjured Mana Cake";
 
     private final String value;
 
-    ItemName (final String value){
+    ItemName(final String value) {
         this.value = value;
     }
 
-    Boolean isAgedBrie(){
+    Boolean isAgedBrie() {
         return AGED_BRIE.equals(value);
     }
 
@@ -22,8 +23,12 @@ final class ItemName {
         return BACKSTAGE_PASSES.equals(value);
     }
 
-    Boolean isSulfuras(){
+    Boolean isSulfuras() {
         return SULFURAS.equals(value);
+    }
+
+    Boolean isConjured() {
+        return CONJURED.equals(value);
     }
 
     @Override

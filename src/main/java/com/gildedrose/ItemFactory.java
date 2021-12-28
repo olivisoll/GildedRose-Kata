@@ -8,7 +8,8 @@ final class ItemFactory {
 
         if (name.isAgedBrie()) return new AgedBrie(sellIn, quality);
         if (name.isBackstagePasses()) return new BackstagePasses(sellIn, quality);
-        if (name.isSulfuras()) return new Sulfuras(sellIn, quality);
+        if (name.isSulfuras()) return new Sulfuras(sellIn);
+        if (name.isConjured()) return new Conjured(sellIn, quality);
 
         return new StandardItem(name, sellIn, quality);
     }

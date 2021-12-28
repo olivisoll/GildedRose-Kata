@@ -17,7 +17,7 @@ public class TexttestFixture {
                 ItemFactory.basedOn("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 ItemFactory.basedOn("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                ItemFactory.basedOn("Conjured Mana Cake", 3, 6) );
+                ItemFactory.basedOn("Conjured Mana Cake", 3, 6));
 
         GildedRose app = new GildedRose();
 
@@ -34,6 +34,12 @@ public class TexttestFixture {
             }
             System.out.println();
             app.updateQuality(items);
+        }
+        
+        System.out.println("-------- FINAL STATUS --------");
+        System.out.println("name, sellIn, quality");
+        for (Item item : items) {
+            System.out.println(item);
         }
     }
 
